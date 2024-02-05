@@ -11,13 +11,24 @@ const App = () => {
   const part3 = "State of a component";
   const exercises3 = 14;
 
+  const part_01 = {
+    part: "Fundamentals of React",
+    exercises: 10,
+  };
+  const part_02 = {
+    part: "Using props to pass data",
+    exercises: 7,
+  };
+  const part_03 = {
+    part: "State of a component",
+    exercises: 14,
+  };
+  const courseData = [part_01, part_02, part_03];
+
   return (
     <div>
       <Header course={course} />
-      <Content
-        parts={[part1, part2, part3]}
-        exercises={[exercises1, exercises2, exercises3]}
-      />
+      <Content courseData={courseData} />
       <Total exercises={exercises1 + exercises2 + exercises3} />
     </div>
   );
